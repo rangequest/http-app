@@ -7,7 +7,9 @@ axios.interceptors.response.use(null, error => {
 
   if (!expectedError) {
     logger.log(error);
-    toast.error("An Unexpected Error Occured!");
+    toast.error("An Unexpected Error Occured!", {
+      position: toast.POSITION.TOP_CENTER,
+    });
   }
 
   return Promise.reject(error);
