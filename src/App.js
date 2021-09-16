@@ -51,6 +51,7 @@ class App extends Component {
         <button className="btn btn-primary" onClick={this.handleAdd}>
           Add
         </button>
+        <button onClick={methodDoesNotExist}>Break the world</button>;
         <ToastContainer />
         <table className="table">
           <thead>
