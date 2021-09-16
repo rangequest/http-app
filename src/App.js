@@ -7,6 +7,11 @@ class App extends Component {
     posts: [],
   };
 
+  componentDidMount = async () => {
+    const { data: posts } = await axios.get("https://jsonplaceholder.typicode.com/posts");
+    this.setState({ posts });
+  };
+
   handleAdd = () => {
     console.log("Add");
   };
