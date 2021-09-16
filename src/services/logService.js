@@ -1,7 +1,7 @@
 import * as Sentry from "@sentry/react";
 import { Integrations } from "@sentry/tracing";
 
-init = () => {
+const init = () => {
   Sentry.init({
     dsn: "https://4885944b90614ae9826de550b6bd3ce2@o1002268.ingest.sentry.io/5962420",
     integrations: [new Integrations.BrowserTracing()],
@@ -13,7 +13,7 @@ init = () => {
   });
 };
 
-log = error => {
+const log = error => {
   Sentry.captureException(error);
 };
 
